@@ -1,0 +1,327 @@
+*,  html body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+/* navbar */
+.fContainer {
+    display: flex;
+    left: 0;
+    right: 0;
+    width: 100vw;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    padding: 15px;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 7px 15px 0 black;
+    margin-bottom: 20px;
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    padding: 15px;
+    text-transform: capitalize;
+}
+
+.firstname {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.lastname {
+    color: green;
+    font-weight: 700;
+    padding-left: 7px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation > li {
+    list-style-type: none;
+    padding: 15px;
+}
+
+.navigation > li > a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.navigation > li > a:hover{
+    color: green;
+    transition: all .3s ease-in-out;
+}
+
+.active {
+    background-color: green;
+    color: black;
+    padding: 15px;
+}
+
+.active:hover {
+    color: white !important;
+}
+
+/* slideshow */
+
+.slideshow {
+    background-color: #ffffff;
+    padding: 100px 0 0 0;
+}
+
+.slide {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.img-slide {
+    display: none;
+}
+
+.laptop-slide {
+    vertical-align: middle;
+    width:75%;height: 75%;
+    
+    
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: rgb(255, 254, 224);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+}
+
+.text-laptop {
+    color: #000000;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 800px) {
+
+    .slide {
+        padding: 8px 50px 12px 50px;
+    }
+
+    .next {
+        right: 50px;
+        border-radius: 3px 0 0 3px;
+    }
+    
+}
+
+.slideshow .page {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }    
+    to {
+        opacity: 1;
+    }
+}
+
+
+.page .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(223, 223, 223);
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    border-radius: 50%;
+}
+
+.page .active,
+.page .dot:hover {
+    background-color: green;
+}
+
+/* produk */
+
+.produk-laptop {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.content-container {
+    min-height: 400px;
+    margin: 40px 40px;
+    padding: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.content-container .card {
+    height: 100%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(1, 1, 1, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(1, 1, 1, 0.2);
+    cursor: pointer;
+}
+
+.card > img {
+    object-fit: fill;
+    height: 240px;
+    width: 100%;
+}
+
+.card > .card-body {
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin: 0 15px 15px 0;
+}
+
+.card p {
+    color: var(--gray);
+    font-size: 16px;
+}
+
+.card > .card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+
+.card > .card-footer a {
+    padding: 10px 10px 10px;
+    background-color: green;
+    font-size: 200;
+    text-decoration: none;
+    color: white;
+}
+
+.card > .card-footer a:hover {
+    background-color: white;
+    color: green;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* footer */
+
+footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
+    box-shadow: 15px 7px 15px 0 black;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content .toko-footer{
+    color: green;
+    font-weight: 700;
+    padding-left: 7px;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    color: green;
+    font-weight: 700;
+}

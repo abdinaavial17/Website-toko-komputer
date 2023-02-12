@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Situs penjualan lapotop</title>
+</head>
+<body>
+    <!-- navbar -->
+    <div class="fContainer">
+        <nav class="wrapper">
+            <div class="brand">
+                <div class="firstname">TOKO</div>
+                <div class="lastname">KOMPUTER</div>
+            </div>
+            <ul class="navigation">
+                <li><a href="home.html" class="active">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- slidshow -->
+    <div class="slideshow">
+        <div class="slide">
+            <center>
+                <div class="img-slide fade">
+                    <a href="rog.html" ><img src="rog slide.jpg" alt="rog" class="laptop-slide"></a>
+                    <div class="text-laptop">Asus ROG G15</div>
+                </div>
+                <div class="img-slide">
+                    <a href="nitro.html"><img src="nitro slide.jpg" alt="nitro" class="laptop-slide"></a>
+                    <div class="text-laptop">Acer Nitro 5</div>
+                </div>
+                <div class="img-slide">
+                    <a href="msi.html"><img src="gf63 slide.jpg" alt="msi" class="laptop-slide"></a>
+                    <div class="text-laptop">MSI GF63</div>
+                </div>
+            </center>
+            
+            <a class="prev" onClick="nextslide(-1)">&#10094;</a>
+            <a class="next" onClick="nextslide(1)">&#10095;</a>
+        </div>
+        <div class="page">
+            <span class="dot" onClick="dotslide(1)"></span>
+            <span class="dot" onClick="dotslide(2)"></span>
+            <span class="dot" onClick="dotslide(3)"></span>
+        </div>
+    </div>
+    <!-- produk -->
+    <h1 align="center" class="produk-laptop">Produk yang kami jual</h1>
+    <section class="content-container">
+        <div class="card">
+            <img src="rog home.png" alt="coding">
+            <div class="card-body">
+                <h3>Asus ROG Strix G15</h3>
+                <p>Ini adalah Laptop Asus ROG Strix....</p>
+            </div>
+            <div class="card-footer">
+                <a href="rog.html">Lihat selengkapnya</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="nitro home.webp" alt="diskusi">
+            <div class="card-body">
+                <h3>Acer Nitro 5</h3>
+                <p>Ini adalah Laptop Acer Nitro 5....</p>
+            </div>
+            <div class="card-footer">
+                <a href="nitro.html">Lihat selengkapnya</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="gf63 home.jpg" alt="laptop">
+            <div class="card-body">
+                <h3>MSI GF63</h3>
+                <p>Ini adalah Laptop MSI GF63....</p>
+            </div>
+            <div class="card-footer">
+                <a href="msi.html">Lihat selengkapnya</a>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+        <footer>
+                <div class="footer-content">
+                    <h3>TOKO<span class="toko-footer">KOMPUTER</span></h3>
+                    <p>Terima kasih atas kunjungan anda</p>
+                </div>
+                <div class="footer-bottom">
+                    <p>copyright &copy;2022 designed by <span>ABDI NAAVI'AL UMAM SULEMAN</span></p>
+                </div>
+        </footer>
+    <!-- end  -->
+    <script>
+        var slideIndex = 1;
+            showSlide(slideIndex);
+
+        function nextslide(n){
+            showSlide(slideIndex += n);
+        }
+
+        function dotslide(n){
+            showSlide(slideIndex = n);
+        }
+
+        function showSlide(n) {
+            var i;
+            var slides = document.getElementsByClassName("img-slide");
+            var dot = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                
+                dot[i].className = dot[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+            dot[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+</html>

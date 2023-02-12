@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Silahkan melakukan pendaftaran terlebih dahulu</title>
+</head>
+<body>
+    <!-- navbar -->
+    <div class="fContainer">
+        <nav class="wrapper">
+            <div class="brand">
+                <div class="firstname">TOKO</div>
+                <div class="lastname">KOMPUTER</div>
+            </div>
+            <ul class="navigation">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br><br><br>
+    <!-- form -->
+    <div class="form" align="center">
+        <form action="home.html" onsubmit="showPopup()">
+            <table>
+                <tr>
+                    <th align="center" colspan="2">Form untuk melakukan pembelian</th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="nama">Nama Pembeli :</label>
+                    </td>
+                    <td>
+                        <input type="text" id="nama" name="nama" size="30" placeholder="Masukkan nama anda....." 
+                        required oninvalid="this.setCustomValidity('Nama wajib diisi')" oninput="this.setCustomValidity('')" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="alamat">Alamat :</label>
+                    </td>
+                    <td>
+                        <input type="text" id="alamat" name="nama" size="30" placeholder="Masukkan alamat anda....." 
+                        required oninvalid="this.setCustomValidity('Alamat wajib diisi')" oninput="this.setCustomValidity('')" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email :</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email" size="30" placeholder="Masukkan email anda...." 
+                        required oninvalid="this.setCustomValidity('Email wajib diisi')" oninput="this.setCustomValidity('')" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="nomor">Nomor telepon :</label>
+                    </td>
+                    <td>
+                        <input type="tel" id="nomor" name="nomor" size="30" placeholder="Masukkan nomor telepon anda...." 
+                        required oninvalid="this.setCustomValidity('Nomor telepon wajib diisi')" oninput="this.setCustomValidity('')" autocomplete="off">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="jk">Jenis Kelamin : </label>
+                    </td>
+                    <td>
+                        <label><input type="radio" id="jk" name="jk" value="Laki-laki" required oninvalid="this.setCustomValidity('Jenis Kelamin wajib diisi')" oninput="this.setCustomValidity('')"/> Laki-laki</label><br>
+                        <label><input type="radio" id="jk" name="jk" value="Perempuan" required oninvalid="this.setCustomValidity('Jenis Kelamin wajib diisi')" oninput="this.setCustomValidity('')"/> Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="laptop">Laptop yang ingin dibeli</label>
+                    </td>
+                    <td>
+                        <select name="laptop" id="laptop" required oninvalid="this.setCustomValidity('Jenis laptop wajib diisi')" oninput="this.setCustomValidity('')">
+                            <option value="">--Pilih Barang--</option>
+                            <option value="Rog">Asus ROG Strix G15</option>
+                            <option value="Nitro">Acer Nitro 5</option>
+                            <option value="MSI">MSI GF63</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="check"><input type="checkbox" id="check" name="check" required 
+                        oninvalid="this.setCustomValidity('Wajib diberi tanda centang')" oninput="this.setCustomValidity('')" "
+                        /> Saya akan menyetujui bahwa pembelian laptop ini dengan metode COD</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><br>
+                        <input type="submit" value="Kirim" class="tombol">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <br><br><br>
+    <footer>
+        <div class="footer-content">
+            <h3>TOKO<span class="toko-footer">KOMPUTER</span></h3>
+            <p>Terima kasih atas kunjungan anda</p>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 designed by <span>ABDI NAAVI'AL UMAM SULEMAN</span></p>
+        </div>
+    </footer>
+    <script>
+        function showPopup() {
+    // Tampilkan pop up menggunakan alert box
+    alert("Terima kasih atas pembeliannya. Silahkan menunggu beberapa hari kemudian");
+    
+    // Tampilkan modal window
+    document.getElementById("myModal").style.display = "block";
+    }
+</script>
+</body>
+</html>
